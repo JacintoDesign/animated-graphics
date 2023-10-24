@@ -20,6 +20,7 @@ body {
   left: 35vw;
 }
 
+/* Left Box */
 .left-box {
   position: absolute;
   left: -167px;
@@ -33,7 +34,8 @@ body {
   animation: revealLeft .5s linear forwards;
 }
 
-.bar-container {
+/* Main Bar Container */
+.main-bar-container {
   position: relative;
   width: max-content;
 }
@@ -67,7 +69,7 @@ body {
   animation: slideIn .5s ease-in-out forwards .2s;
 }
 
-.main-text {
+.main-bar-text {
   pointer-events: none; 
   color: white;
   font-weight: 600;
@@ -83,7 +85,8 @@ body {
   text-overflow: ellipsis;
 }
 
-.bottom-box {
+/* Bottom Bar */
+.bottom-bar {
   height: 41px;
   background: rgba(0, 0, 0, 0.9);
   position: absolute;
@@ -94,7 +97,7 @@ body {
   clip-path: polygon(9px 0, 100% 0, 100% 100%, 0% 100%);
 }
 
-.bottom-box-text {
+.bottom-bar-text {
   pointer-events: none; 
   color: white;
   font-weight: 600;
@@ -110,20 +113,21 @@ body {
   text-overflow: ellipsis;
 }
 
-.top-box {
+/* Top Bar */
+.top-bar {
   width: max-content;
   height: 41px;
   background: rgba(243, 249, 255, 0.9);
   position: absolute;
   top: -40px;
-  left: 22px;
+  left: 24px;
   opacity: 0;
   animation: slideUpTop .5s ease-in forwards .2s;
   display: inline-block;
-  clip-path: polygon(9px 0%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(8px 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
-.top-box-text {
+.top-bar-text {
   pointer-events: none; 
   color: #333;
   font-weight: 600;
