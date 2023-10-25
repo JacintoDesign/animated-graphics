@@ -29,6 +29,23 @@ function runAnimationOUT() {
     topBar.style.animation = 'slideDownTop .3s ease-in forwards';
 }
 
+// Keyboard Shortcut to Toggle Animations
+let isGrapicVisible = true;
+
+window.addEventListener('keydown', (event) => {
+    event.preventDefault();
+    // Check if the pressed key code is 'Space' for spacebar
+    if (event.code === 'Space') {
+        if (isGrapicVisible) {
+            runAnimationOUT();
+            isGrapicVisible = false;
+        } else {
+            location.reload();
+            isGrapicVisible = true;
+        }
+    }
+});
+
 // On Load: Adjust bar width
 window.onload = () => adjustBarWidth();
 
@@ -47,23 +64,6 @@ function adjustBarWidth() {
 
     // Set widths of bars
     blackBar.style.width = barWidth + 'px';
-    bottomBar.style.width = `${barWidth + 9}px`;
+    bottomBar.style.width = `${barWidth + 8}px`;
     goldBar.style.width = (barWidth + 15) + 'px';
 }
-
-// Keyboard Shortcut to Toggle Animations
-let isGrapicVisible = true;
-
-window.addEventListener('keydown', (event) => {
-    event.preventDefault();
-    // Check if the pressed key code is 'Space' for spacebar
-    if (event.code === 'Space') {
-        if (isGrapicVisible) {
-            runAnimationOUT();
-            isGrapicVisible = false;
-        } else {
-            location.reload();
-            isGrapicVisible = true;
-        }
-    }
-});
